@@ -17,6 +17,8 @@ Usage
     .. code-block:: bash
 
         $ cookiecutter gh:OnroerendErfgoed/atramhasis_scaffold_cookiecutter
+        $ # Or create a project from a specific branch/release
+        $ # cookiecutter gh:OnroerendErfgoed/atramhasis_scaffold_cookiecutter --checkout develop
 
 #.  Create a virtual environment and install requirements
 
