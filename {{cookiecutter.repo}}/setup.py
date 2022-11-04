@@ -20,6 +20,7 @@ requires = [
     'skosprovider',
     'skosprovider_sqlalchemy',
     'pyramid_skosprovider',
+    'pyramid_openapi3',
     'pyramid_jinja2',
     'alembic',
     'babel',
