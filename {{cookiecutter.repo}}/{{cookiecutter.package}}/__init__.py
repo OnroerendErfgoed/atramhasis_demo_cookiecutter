@@ -2,6 +2,7 @@ import os
 
 from atramhasis.data.models import Base
 from pyramid.config import Configurator
+from pyramid.session import SignedCookieSessionFactory
 from pyramid.settings import aslist
 from sqlalchemy import engine_from_config
 
@@ -27,8 +28,6 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
 
     # set default session factory
-    from pyramid.session import SignedCookieSessionFactory
-
     atramhasis_session_factory = SignedCookieSessionFactory(
         settings["atramhasis.session_factory.secret"]
     )
@@ -46,6 +45,9 @@ def main(global_config, **settings):
     config.override_asset(
         to_override="atramhasis:static/",
         override_with="{{cookiecutter.package}}:static/",
+    )    # Add static
+    config.add_static_view(
+        name="static", path="atramhasis:static", cache_max_age=3600
     )
 
     config.scan()
