@@ -45,7 +45,8 @@ def main(global_config, **settings):
     config.override_asset(
         to_override="atramhasis:static/",
         override_with="{{cookiecutter.package}}:static/",
-    )    # Add static
+    )
+    # Add atramhasis static folder
     config.add_static_view(
         name="static", path="atramhasis:static", cache_max_age=3600
     )
