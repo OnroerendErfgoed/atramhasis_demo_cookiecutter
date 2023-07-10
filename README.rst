@@ -5,7 +5,7 @@ atramhasis demo project
 Requirements
 ------------
 
-*   Python 3.6+
+*   Python 3.9+
 *   npm
 *   `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/installation.html>`_
 
